@@ -1,0 +1,257 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1154,1054" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Xml.Serialization</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Drawing.Primitives</AssemblyReference>
+      <AssemblyReference>System.Drawing.Common</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Collections</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>NPOI</AssemblyReference>
+      <AssemblyReference>System.Memory.Data</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>UiPath.Workflow</AssemblyReference>
+      <AssemblyReference>System.Data.SqlClient</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>Microsoft.Win32.Primitives</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+      <AssemblyReference>System.Private.Xml</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="450,989" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="scg:Dictionary(x:String, x:Object)" Name="Config" />
+      <Variable x:TypeArguments="x:String" Name="FirstWebsite" />
+      <Variable x:TypeArguments="x:String" Name="SPDFToProcess" />
+      <Variable x:TypeArguments="x:String" Name="CaseNum" />
+      <Variable x:TypeArguments="x:String" Name="LOB" />
+      <Variable x:TypeArguments="x:String" Name="TrackerType" />
+      <Variable x:TypeArguments="x:String" Name="FileType" />
+      <Variable x:TypeArguments="x:String" Name="TrackerLabel" />
+      <Variable x:TypeArguments="x:String" Name="Street" />
+      <Variable x:TypeArguments="x:String" Name="UserName" />
+      <Variable x:TypeArguments="x:String" Name="Password" />
+      <Variable x:TypeArguments="x:String" Name="City" />
+      <Variable x:TypeArguments="x:String" Name="State" />
+      <Variable x:TypeArguments="x:String" Name="Zip" />
+      <Variable x:TypeArguments="x:String" Name="PrimaryContact" />
+      <Variable x:TypeArguments="x:String" Name="ContactEmail" />
+      <Variable x:TypeArguments="x:String" Name="ContactPhone" />
+      <Variable x:TypeArguments="x:String" Name="FileDistroEmail" />
+      <Variable x:TypeArguments="x:String" Name="WebsiteURL" />
+      <Variable x:TypeArguments="x:String" Name="ParentID1" />
+      <Variable x:TypeArguments="x:String" Name="ParentID2" />
+      <Variable x:TypeArguments="x:String" Name="ParentID3" />
+      <Variable x:TypeArguments="x:String" Name="ParentID4" />
+      <Variable x:TypeArguments="x:String" Name="ParentID5" />
+      <Variable x:TypeArguments="x:String" Name="ParentID6" />
+      <Variable x:TypeArguments="x:String" Name="ParentID7" />
+      <Variable x:TypeArguments="x:String" Name="ParentID8" />
+      <Variable x:TypeArguments="x:String" Name="ParentID9" />
+      <Variable x:TypeArguments="x:String" Name="ParentID10" />
+      <Variable x:TypeArguments="x:String" Name="ParentID11" />
+      <Variable x:TypeArguments="x:String" Name="ParentID12" />
+      <Variable x:TypeArguments="x:String" Name="ParentID13" />
+      <Variable x:TypeArguments="x:String" Name="ParentID14" />
+      <Variable x:TypeArguments="x:String" Name="ParentID15" />
+      <Variable x:TypeArguments="x:String" Name="ParentID16" />
+      <Variable x:TypeArguments="x:String" Name="ParentID17" />
+      <Variable x:TypeArguments="x:String" Name="ParentID18" />
+      <Variable x:TypeArguments="x:String" Name="ParentID19" />
+      <Variable x:TypeArguments="x:String" Name="ParentID20" />
+      <Variable x:TypeArguments="x:String" Name="ParentID21" />
+      <Variable x:TypeArguments="x:String" Name="ParentID22" />
+      <Variable x:TypeArguments="x:String" Name="ParentID23" />
+      <Variable x:TypeArguments="x:String" Name="ParentID24" />
+      <Variable x:TypeArguments="x:String" Name="ParentID25" />
+      <Variable x:TypeArguments="x:String" Name="ParentID26" />
+      <Variable x:TypeArguments="x:String" Name="ParentID27" />
+      <Variable x:TypeArguments="x:String" Name="ParentID28" />
+      <Variable x:TypeArguments="x:String" Name="ParentID29" />
+      <Variable x:TypeArguments="x:String" Name="ParentID30" />
+      <Variable x:TypeArguments="x:String" Name="BotStatus" />
+      <Variable x:TypeArguments="sd:DataTable" Name="FileDT" />
+      <Variable x:TypeArguments="x:String" Name="MasterFolder" />
+      <Variable x:TypeArguments="x:String" Name="FileToday" />
+      <Variable x:TypeArguments="x:Boolean" Name="FileExists" />
+      <Variable x:TypeArguments="x:String" Name="RecipientTo" />
+      <Variable x:TypeArguments="x:String" Name="RecipientCC" />
+      <Variable x:TypeArguments="x:String" Name="SMTPServer" />
+      <Variable x:TypeArguments="x:String" Name="ProcessNameExcel" />
+      <Variable x:TypeArguments="x:String" Name="ProcessNameEdge" />
+      <Variable x:TypeArguments="x:String" Name="TrackerMngtURL" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="InitAllSettings.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="388,113" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" UnSafe="False" WorkflowFileName="InitAllSettings.xaml">
+      <ui:InvokeWorkflowFile.Arguments>
+        <InArgument x:TypeArguments="x:String" x:Key="in_ConfigFile">LenderSetupConfigFile.xlsx</InArgument>
+        <OutArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)" x:Key="out_Config">[Config]</OutArgument>
+      </ui:InvokeWorkflowFile.Arguments>
+    </ui:InvokeWorkflowFile>
+    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Close all active Excel and Edge applications.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="388,113" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_8" UnSafe="False" WorkflowFileName="Close all active Excel and PDF applications.xaml">
+      <ui:InvokeWorkflowFile.Arguments>
+        <InArgument x:TypeArguments="x:String" x:Key="In_ProcessNameExcel">[ProcessNameExcel]</InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="In_ProcessNameEdge">[ProcessNameEdge]</InArgument>
+      </ui:InvokeWorkflowFile.Arguments>
+    </ui:InvokeWorkflowFile>
+    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Auto email notification once the automation starts.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="388,113" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_4" UnSafe="False" WorkflowFileName="Auto email notification once the automation starts.xaml">
+      <ui:InvokeWorkflowFile.Arguments>
+        <InArgument x:TypeArguments="x:String" x:Key="In_SMTPServer">[Config("SMTPServer").ToString]</InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="In_RecipientTo">[Config("RecipientTo").ToString]</InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="In_RecipientCC">[Config("RecipientCC").ToString]</InArgument>
+      </ui:InvokeWorkflowFile.Arguments>
+    </ui:InvokeWorkflowFile>
+    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="DataTable creation from the SPDFToProcess file in SharePoint site.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="388,113" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_3" UnSafe="False" WorkflowFileName="DataTable creation from the SPDFToProcess file in SharePoint site.xaml">
+      <ui:InvokeWorkflowFile.Arguments>
+        <OutArgument x:TypeArguments="x:String" x:Key="out_CaseNum">[CaseNum]</OutArgument>
+        <OutArgument x:TypeArguments="x:String" x:Key="out_LOB">[LOB]</OutArgument>
+        <OutArgument x:TypeArguments="x:String" x:Key="out_TrackerType">[TrackerType]</OutArgument>
+        <OutArgument x:TypeArguments="x:String" x:Key="out_TrackerLabel">[TrackerLabel]</OutArgument>
+        <OutArgument x:TypeArguments="x:String" x:Key="out_Street">[Street]</OutArgument>
+        <OutArgument x:TypeArguments="x:String" x:Key="out_Username">[Username]</OutArgument>
+        <OutArgument x:TypeArguments="x:String" x:Key="out_Password">[Password]</OutArgument>
+        <OutArgument x:TypeArguments="x:String" x:Key="out_City">[City]</OutArgument>
+        <OutArgument x:TypeArguments="x:String" x:Key="out_State">[State]</OutArgument>
+        <OutArgument x:TypeArguments="x:String" x:Key="out_Zip">[Zip]</OutArgument>
+        <OutArgument x:TypeArguments="x:String" x:Key="out_PrimaryContact">[PrimaryContact]</OutArgument>
+        <OutArgument x:TypeArguments="x:String" x:Key="out_ContactEmail">[ContactEmail]</OutArgument>
+        <OutArgument x:TypeArguments="x:String" x:Key="out_ContactPhone">[ContactPhone]</OutArgument>
+        <OutArgument x:TypeArguments="x:String" x:Key="out_FileDistroEmail">[FileDistroEmail]</OutArgument>
+        <OutArgument x:TypeArguments="x:String" x:Key="out_WebsiteURL">[WebsiteURL]</OutArgument>
+        <OutArgument x:TypeArguments="x:String" x:Key="out_ParentID1">[ParentID1]</OutArgument>
+        <OutArgument x:TypeArguments="x:String" x:Key="out_ParentID2">[ParentID2]</OutArgument>
+        <OutArgument x:TypeArguments="x:String" x:Key="out_ParentID3">[ParentID3]</OutArgument>
+        <OutArgument x:TypeArguments="x:String" x:Key="out_ParentID4">[ParentID4]</OutArgument>
+        <OutArgument x:TypeArguments="x:String" x:Key="out_ParentID5">[ParentID5]</OutArgument>
+        <OutArgument x:TypeArguments="x:String" x:Key="out_ParentID6">[ParentID6]</OutArgument>
+        <OutArgument x:TypeArguments="x:String" x:Key="out_ParentID7">[ParentID7]</OutArgument>
+        <OutArgument x:TypeArguments="x:String" x:Key="out_ParentID8">[ParentID8]</OutArgument>
+        <OutArgument x:TypeArguments="x:String" x:Key="out_ParentID9">[ParentID9]</OutArgument>
+        <OutArgument x:TypeArguments="x:String" x:Key="out_ParentID10">[ParentID10]</OutArgument>
+        <OutArgument x:TypeArguments="x:String" x:Key="out_ParentID11">[ParentID11]</OutArgument>
+        <OutArgument x:TypeArguments="x:String" x:Key="out_ParentID12">[ParentID12]</OutArgument>
+        <OutArgument x:TypeArguments="x:String" x:Key="out_ParentID13">[ParentID13]</OutArgument>
+        <OutArgument x:TypeArguments="x:String" x:Key="out_ParentID14">[ParentID14]</OutArgument>
+        <OutArgument x:TypeArguments="x:String" x:Key="out_ParentID15">[ParentID15]</OutArgument>
+        <OutArgument x:TypeArguments="x:String" x:Key="out_ParentID16">[ParentID16]</OutArgument>
+        <OutArgument x:TypeArguments="x:String" x:Key="out_ParentID17">[ParentID17]</OutArgument>
+        <OutArgument x:TypeArguments="x:String" x:Key="out_ParentID18">[ParentID18]</OutArgument>
+        <OutArgument x:TypeArguments="x:String" x:Key="out_ParentID19">[ParentID19]</OutArgument>
+        <OutArgument x:TypeArguments="x:String" x:Key="out_ParentID20">[ParentID20]</OutArgument>
+        <OutArgument x:TypeArguments="x:String" x:Key="out_ParentID21">[ParentID21]</OutArgument>
+        <OutArgument x:TypeArguments="x:String" x:Key="out_ParentID22">[ParentID22]</OutArgument>
+        <OutArgument x:TypeArguments="x:String" x:Key="out_ParentID23">[ParentID23]</OutArgument>
+        <OutArgument x:TypeArguments="x:String" x:Key="out_ParentID24">[ParentID24]</OutArgument>
+        <OutArgument x:TypeArguments="x:String" x:Key="out_ParentID25">[ParentID25]</OutArgument>
+        <OutArgument x:TypeArguments="x:String" x:Key="out_ParentID26">[ParentID26]</OutArgument>
+        <OutArgument x:TypeArguments="x:String" x:Key="out_ParentID27">[ParentID27]</OutArgument>
+        <OutArgument x:TypeArguments="x:String" x:Key="out_ParentID28">[ParentID28]</OutArgument>
+        <OutArgument x:TypeArguments="x:String" x:Key="out_ParentID29">[ParentID29]</OutArgument>
+        <OutArgument x:TypeArguments="x:String" x:Key="out_ParentID30">[ParentID30]</OutArgument>
+        <OutArgument x:TypeArguments="x:String" x:Key="out_BotStatus">[BotStatus]</OutArgument>
+        <OutArgument x:TypeArguments="x:String" x:Key="out_FileType">[FileType]</OutArgument>
+        <OutArgument x:TypeArguments="sd:DataTable" x:Key="out_FileDT">[FileDT]</OutArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="in_MasterFolder">[Config("MasterFolder").ToString]</InArgument>
+        <InArgument x:TypeArguments="x:Boolean" x:Key="in_FileExists">[FileExists]</InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="in_FileToday">[FileToday]</InArgument>
+      </ui:InvokeWorkflowFile.Arguments>
+    </ui:InvokeWorkflowFile>
+    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Workflow to login to FIRST AMS Portal.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="388,113" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_7" UnSafe="False" WorkflowFileName="Workflow to login to FIRST AMS Portal.xaml">
+      <ui:InvokeWorkflowFile.Arguments>
+        <InArgument x:TypeArguments="x:String" x:Key="In_FirstWebsite">[Config("FirstWebsite").ToString]</InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="In_SPDFToProcess">[Config("SPDFToProcess").ToString]</InArgument>
+        <InArgument x:TypeArguments="sd:DataTable" x:Key="In_FileDT">[FileDT]</InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="In_LOB">[LOB]</InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="In_TrackerLabel">[TrackerLabel]</InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="In_UserName">[UserName]</InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="In_Street">[Street]</InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="In_Password">[Password]</InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="In_City">[City]</InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="In_Zip">[Zip]</InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="In_State">[State]</InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="In_PrimaryContact">[PrimaryContact]</InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="In_ContactEmail">[ContactEmail]</InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="In_ContactPhone">[ContactPhone]</InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="In_FileDistroEmail">[FileDistroEmail]</InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="In_WebsiteURL">[WebsiteURL]</InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="In_FileToday">[FileToday]</InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="In_MasterFolder">[Config("MasterFolder").ToString]</InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="In_TrackerMngtURL">[Config("TrackerMngtURL").ToString]</InArgument>
+      </ui:InvokeWorkflowFile.Arguments>
+    </ui:InvokeWorkflowFile>
+    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Auto-email after automation run.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="388,113" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_5" UnSafe="False" WorkflowFileName="Auto-email after automation run.xaml">
+      <ui:InvokeWorkflowFile.Arguments>
+        <InArgument x:TypeArguments="x:String" x:Key="In_RecipientCC">[Config("RecipientCC").ToString]</InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="In_RecipientTo">[Config("RecipientTo").ToString]</InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="IN_SMTPServer">[Config("SMTPServer").ToString]</InArgument>
+      </ui:InvokeWorkflowFile.Arguments>
+    </ui:InvokeWorkflowFile>
+  </Sequence>
+</Activity>
